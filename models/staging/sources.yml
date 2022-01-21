@@ -1,0 +1,40 @@
+version: 2
+
+sources:
+  - name: adventureworks_etl
+    description: This is a replica of the Postgres database used by our client
+    tables:
+      - name: address
+        description: Has address information
+      - name: countryregion
+        description: Country Region
+      - name: creditcard 
+        description: Credit card information
+      - name: customer
+        description: Customer information by region and store
+      - name: employee
+        description: Employee information
+      - name: person
+        description: Information person
+      - name: product
+        description: Information product
+      - name: salesorderdetail
+        description: Sales order detail
+        columns:
+          - name: salesorderid
+            description: Primary key of the orders table
+            tests:
+              - not_null
+      - name: salesorderheadersalesreason
+        description: Sales order header sales reason       
+      - name: salesorderheader
+        description: Sales order header
+      - name: salesperson
+        description: Store sales values
+      - name: salesreason
+        description: Sales reason
+      - name: salesterritory
+        description: Classification of locations by region
+      - name: stateprovince
+        description: State province
+

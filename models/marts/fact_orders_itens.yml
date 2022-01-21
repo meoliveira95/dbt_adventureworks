@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: fact_orders_itens
+    columns:
+      - name: sales_order_id
+        description: The primary key of the sales order
+        tests:
+          - not_null
